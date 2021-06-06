@@ -8,12 +8,12 @@ app = Flask(__name__)
 api = Api(app)
 
 # Load Model
-clf_path = 'lib/models/fic-model.pkl'
+clf_path = 'models/fic-model.pkl'
 with open(clf_path,'rb') as f:
     model = joblib.load(f)
 
 # Load Tfidf
-tfidf_path = 'lib/models/fic-tfidf.pkl'
+tfidf_path = 'models/fic-tfidf.pkl'
 with open(tfidf_path,'rb') as f:
     tfidf = pickle.load(f)
 
