@@ -19,12 +19,12 @@ with open(tfidf_path,'rb') as f:
 
 @app.route("/")
 def home():
-    return "Fiction Gene Model Service"
+    return make_response("Fiction Gene Model Service", 200)
 
 @app.route("/predict", methods=['POST','GET'])
 def prediction():
     if request.method == 'GET':
-        return make_response('Resend with POST Method',200)
+        return make_response('Resend with POST Method', 200)
     
     elif request.method == 'POST':
         x = request.get_json()
@@ -32,7 +32,7 @@ def prediction():
         x_token = word_tokenize(x_content)
         x_trans = tfidf.transform([x_token])
         
-        prob_raw = model.predict_proba(x_trans).round(2)
+        prob_raw = model.predict_proba(x_trans).round(4)
         prob = prob_raw[0]
         prob_genre = []
         for i in range(0, len(model.classes_)):
