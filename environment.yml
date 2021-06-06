@@ -1,0 +1,5 @@
+name: fic-service
+dependencies:
+  - flask
+  - gunicorn
+  - python=3.8
