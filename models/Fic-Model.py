@@ -77,7 +77,7 @@ def showProb(text):
     text = ''.join([c for c in text if c not in emoji.UNICODE_EMOJI])    
     text = normalize(text)
     
-    my_character_name = pd.read_csv('character name list.csv', encoding = 'utf-8', sep=',')
+    my_character_name = pd.read_csv('character_name_list.csv', encoding = 'utf-8', sep=',')
     my_character_name = my_character_name.stack().tolist()
     name_list_fe = set(thai_female_names())
     name_list = set(thai_male_names())
