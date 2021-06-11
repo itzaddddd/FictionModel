@@ -49,7 +49,7 @@ nb.fit(X_train, y_train)
 
 # Evaluate Performance
 y_pred = nb.predict(X_test)
-f1_sc = np.round(f1_score(y_test, y_pred, average='macro'),2)
+f1_sc = np.round(f1_score(y_test, y_pred, average='macro'),3)
 ac_sc = np.round(accuracy_score(y_test, y_pred),2)
 print('F1 score = ',f1_sc)
 print('Accuracy = ',ac_sc)
