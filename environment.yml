@@ -1,4 +1,0 @@
-name: fic-service
-dependencies:
-  - flask
-  - python=3.8
