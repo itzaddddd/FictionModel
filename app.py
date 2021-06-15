@@ -10,7 +10,6 @@ import re
 import string
 import emoji
 import pandas as pd
-nltk.download()
 
 app = Flask(__name__)
 api = Api(app)
