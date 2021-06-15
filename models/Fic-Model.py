@@ -117,7 +117,7 @@ def showProb(text):
     
     tokens = tokens_temp    
     tokens = [i for i in tokens if not i.isnumeric()]   
-    tokens = [i for i in tokens if not ' ' in i]
+    tokens = [i for i in tokens if not ' ' in i] 
     
     # Test model
     ex_tk_trans = tfidf.transform([tokens])
@@ -132,8 +132,8 @@ def showProb(text):
 ################################################################################
 
 # Test Predict Example with text file
-with open('testing novel/ดราม่า/รักครั้งสุดท้ายผ่านรูป(ใบเก่า)/ตอนที่ 1.txt', 'r', encoding="utf-8") as file:
-    Xtest = file.read()
+with open('testing novel/ดราม่า/รักครั้งสุดท้ายผ่านรูป(ใบเก่า)/ตอนที่ 1.txt', 'r', encoding="utf-8") as f:
+    Xtest = f.read()
 
 ex = Xtest
 
