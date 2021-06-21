@@ -14,7 +14,7 @@ How to use
 
 1. Use route '/predict' with Method POST 
 
-2. Set Request Header as 'application/json'
+2. Set Request Header as 'Content-Type' : 'application/json'
 
 3. Send Request with json key 'content'
 
